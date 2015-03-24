@@ -19,8 +19,6 @@ public class Exercise_03_11{
         System.out.print("Enter year: ");
         int year = in.nextInt();
 
-        boolean has_31 = true;
-        boolean has_30 = true;
         boolean leap_year = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
 
         switch (month) {
