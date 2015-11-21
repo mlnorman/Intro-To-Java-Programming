@@ -19,10 +19,10 @@ public class Exercise_04_02{
     public static void main (String[] args){
         Scanner in = new Scanner(System.in);
 
-        System.out.printf("Enter point 1 (latitude and longitude) in degrees: ");
+        System.out.print("Enter point 1 (latitude and longitude) in degrees: ");
         double point_1_latitude = in.nextDouble();
         double point_1_longitude = in.nextDouble();
-        System.out.printf("Enter point 2 (latitude and longitude) in degrees: ");
+        System.out.print("Enter point 2 (latitude and longitude) in degrees: ");
         double point_2_latitude = in.nextDouble();
         double point_2_longitude = in.nextDouble();
 
@@ -33,7 +33,7 @@ public class Exercise_04_02{
             Math.cos(Math.toRadians(point_1_longitude)) * 
             Math.cos(Math.toRadians(point_2_longitude) - Math.toRadians(point_2_latitude))));
     
-        System.out.printf("The distance between the two points is %f km.", d);    
+        System.out.printf("The distance between the two points is %f km.%n", d);    
     }
     
 }
