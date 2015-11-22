@@ -28,16 +28,11 @@ public class Exercise_04_21{
             }
             else
             {
-                if (Character.isDigit(ssnDigit))
-                {
-                    continue;
-                }
-                else
+                if (!Character.isDigit(ssnDigit))
                 {
                     System.out.printf("%s is an invalid social security number%n", ssn);   
                     System.exit(1);
-                }   
-                
+                }
             }
         }
         
