@@ -13,7 +13,7 @@ public class Exercise_05_01{
 
         System.out.print("Enter a series of integers seperated by a space (ex. 1 2 -5 3 0), the input ends if it is 0: ");
         int val = in.nextInt();
-        int total = 0;
+        double total = 0;
         int numOfPos = 0;
         int numOfNeg = 0;
         double avg = 0;
@@ -33,7 +33,8 @@ public class Exercise_05_01{
         }
 
         avg = total / (double) count;
-        // need to finish the output
-        System.out.printf("total: %d average: %.2f%n", total, avg);
+        
+        System.out.printf("The number of positives is %d%nThe number of negatives is %d%n" + 
+            "The total is %.2f%nThe average is %.2f%n", numOfPos, numOfNeg, total, avg);
     }
 }
