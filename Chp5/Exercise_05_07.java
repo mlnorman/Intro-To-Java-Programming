@@ -9,7 +9,7 @@ public class Exercise_05_07{
     public static void main(String[] args){
         double tuition = 10000.0;
         double yearlyIncreasePercentage = 0.05;
-
+        
         double tuitionInTenYears = 0.0;
         double fourYearsOfTuition = 0.0;
 
