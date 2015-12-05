@@ -21,7 +21,6 @@ public class Exercise_08_03 {
         //int[][] totalHoursPerEmployee = new int[7][1];
         int[] totalHoursPerEmployee = sumEmployeeHours(employeeHours);
         int[] indexList = new int[totalHoursPerEmployee.length];
-        
         sortWhileKeepingIndices(totalHoursPerEmployee, indexList);
         
         for (int i = 0; i < totalHoursPerEmployee.length; i++) {
