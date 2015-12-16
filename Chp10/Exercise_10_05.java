@@ -6,43 +6,68 @@
     retrieve and display them in reverse order.
 */
 import java.util.Scanner;
-public class Execise_10_05 {
+
+
+public class Exercise_10_05 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        int[] primes = new int[100];
+        //int[] valuesToCheck = new int[100];
+        StackOfIntegers soi = new StackOfIntegers();
 
         System.out.print("Please enter a positive integer: ");
         int userVal = in.nextInt();
 
-        if (isPrime(userValue)){
-            System.out.printf("The lowest prime factors of %d is: %d, %d",
-                userVal, 1, userVal);
+        if (isPrime(userVal)){
+            System.out.printf("%d is a prime number.", userVal);
         } else {
-            public getFactors(userValue);
+            getFactors(userVal, soi);
         }
 
+        int size = soi.getSize();
+        System.out.printf("The smallest prime factors of %d is ", userVal);
+        for (int i = 0; i < size; i++) {
+            System.out.printf("%d ", soi.pop());
+        }
     }
 
-    public static int[] getFactors(int value) {
-        int[] prime = prime[100];
-        int[] notPrime = prime[1];
+    public static void getFactors(int value, StackOfIntegers soi) {
+        int[] values = new int[100];
+        values[0] = value;
 
-        /*Work i progress*/
+        int valCount = 1;
 
 
-        return prime;
+        for (int potentialPrime : values) {
+            if (isPrime(potentialPrime)) {
+                soi.push(potentialPrime);
+                break;
+            } 
+
+            for (int i = 2; i < potentialPrime; i++) {
+                if (potentialPrime % i == 0) {
+                    soi.push(i);
+                    values[valCount] = potentialPrime / i;
+                    break;
+                }
+            }
+            valCount++;
+        }
     }
 
 
 
-    public static isPrime(int value) {
+    public static boolean isPrime(int value) {
         if (value == 1 || value == 2) {
-            return true
+            return true;
         } else {
             for (int i = 2; i < value; i++) {
-                if (value % 2 == 0)
+                if (value % i == 0)
                     return false;
             }
         }
         return true;
     }
 }
+
+
