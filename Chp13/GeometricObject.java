@@ -1,5 +1,5 @@
 // GeometricObject.java: The abstract GeometricObject class
-public abstract class GeometricObject {
+public abstract class GeometricObject implements Comparable<GeometricObject> {
   private String color = "white";
   private boolean filled;
 
@@ -11,6 +11,18 @@ public abstract class GeometricObject {
   protected GeometricObject(String color, boolean filled) {
     this.color = color;
     this.filled = filled;
+  }
+
+  public int compareTo(GeometricObject obj) {
+    if (this.getArea() > obj.getArea()) {
+      return 1;
+    }
+    else if(this.getArea() < obj.getArea()) {
+      return -1;
+    }
+    else {
+      return 0;
+    }
   }
 
   /**Getter method for color*/
@@ -32,6 +44,18 @@ public abstract class GeometricObject {
   /**Setter method for filled*/
   public void setFilled(boolean filled) {
     this.filled = filled;
+  }
+
+  public static GeometricObject max(GeometricObject obj1, GeometricObject obj2) {
+    int compare = obj1.compareTo(obj2);
+    if (compare == 1) {
+      return obj1;
+    } else if (compare == -1) {
+      return obj2;
+    } else {
+      return obj1;
+    }
+
   }
 
   /**Abstract method findArea*/
