@@ -24,5 +24,3 @@ public class ComparableCircle extends Circle implements Comparable<GeometricObje
   }
 
 }
-
-
