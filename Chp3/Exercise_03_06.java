@@ -11,7 +11,8 @@ public class Exercise_03_06{
         Scanner in = new Scanner(System.in);
         
         final double KILOGRAMS_PER_POUND = 0.45359237; // Constant
-        final double METERS_PER_INCH = 0.0254;
+        final double METERS_PER_INCH = 0.0254;  // Constant
+        final double FEET_PER_INCH = 0.0833333; // Constant
 
         System.out.printf("Enter weight in pounds: ");
         double weight = in.nextDouble();
@@ -21,9 +22,8 @@ public class Exercise_03_06{
         int inches = in.nextInt();
 
         double weightInKilograms = weight * KILOGRAMS_PER_POUND;
-        double heightInMeters = height * METERS_PER_INCH;
-        double bmi = weightInKilograms /
-        (heightInMeters * heightInMeters);
+        double heightInMeters = (inches += FEET_PER_INCH) * METERS_PER_INCH;
+        double bmi = weightInKilograms /(heightInMeters * heightInMeters);
 
         System.out.println("BMI is " + bmi);
         
