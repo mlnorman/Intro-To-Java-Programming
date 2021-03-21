@@ -28,10 +28,10 @@ public class Exercise_04_02{
 
         double d = 6371.01 * Math.acos((
             Math.sin(Math.toRadians(point_1_latitude)) *
-            Math.sin(Math.toRadians(point_1_longitude))) +
+            Math.sin(Math.toRadians(point_2_latitude))) +
             (Math.cos(Math.toRadians(point_1_latitude)) * 
-            Math.cos(Math.toRadians(point_1_longitude)) * 
-            Math.cos(Math.toRadians(point_2_longitude) - Math.toRadians(point_2_latitude))));
+            Math.cos(Math.toRadians(point_2_latitude)) * 
+            Math.cos(Math.toRadians(point_2_longitude) - Math.toRadians(point_1_longitude))));
     
         System.out.printf("The distance between the two points is %f km.%n", d);    
     }
